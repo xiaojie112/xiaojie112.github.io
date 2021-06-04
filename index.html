@@ -165,14 +165,14 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-我的第一篇博客" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-day1 稀疏数组" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2021/06/04/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/">我的第一篇博客</a>
+      <a class="article-title" href="/2021/06/05/day1%20%E7%A8%80%E7%96%8F%E6%95%B0%E7%BB%84/">稀疏数组</a>
     </h1>
   
 
@@ -181,8 +181,8 @@
         
 
 
-<a href="/2021/06/04/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/" class="archive-article-date">
-  	<time datetime="2021-06-03T16:33:34.889Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-04</time>
+<a href="/2021/06/05/day1%20%E7%A8%80%E7%96%8F%E6%95%B0%E7%BB%84/" class="archive-article-date">
+  	<time datetime="2021-06-04T17:49:29.064Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-05</time>
 </a>
 
         
@@ -190,97 +190,59 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h1 id="day1-稀疏数组"><a href="#day1-稀疏数组" class="headerlink" title="day1 稀疏数组"></a>day1 稀疏数组</h1><h3 id="1-数据结构和算法的关系"><a href="#1-数据结构和算法的关系" class="headerlink" title="1. 数据结构和算法的关系"></a>1. 数据结构和算法的关系</h3><ol>
+<li>数据结构是一门研究数据组织方式的学科</li>
+<li>数据结构是算法的基础</li>
+</ol>
+<h3 id="2-稀疏数组（sparseArr"><a href="#2-稀疏数组（sparseArr" class="headerlink" title="2.稀疏数组（sparseArr)"></a>2.稀疏数组（sparseArr)</h3><p>2.1基本介绍</p>
+<p>当一个数组中的大部分元素为0或者大部分值相同时，可以使用稀疏数组来保存</p>
+<p>2.2 处理方法</p>
+<ol>
+<li>记录数组的行和列以及有多少不同的值</li>
+<li>把不同的值记录下来（行，列，具体值）</li>
+</ol>
+<img src="https://i.loli.net/2021/06/05/b53vms8Pl2eV6WD.png" style="zoom:50%;" />
+
+<p>2.3 稀疏数组与原数组的相互转换思路</p>
+<ul>
+<li>原数组转变为稀疏数组<ol>
+<li>遍历原数组，记录非零值的个数</li>
+<li>根据非零值的个数创建稀疏数组</li>
+<li>将非零值存储到稀疏数组</li>
+</ol>
+</li>
+<li>稀疏数组还原<ol>
+<li>通过稀疏数组第一行的数据得到原数组元素个数</li>
+<li>遍历稀疏数组，将值读入到原数组中</li>
+</ol>
+</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">demo1</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//创建二维数组</span></span><br><span class="line">        <span class="keyword">int</span>[][] array=<span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">11</span>][<span class="number">11</span>];</span><br><span class="line">        array[<span class="number">3</span>][<span class="number">4</span>]=<span class="number">10</span>;</span><br><span class="line">        array[<span class="number">6</span>][<span class="number">9</span>]=<span class="number">9</span>;</span><br><span class="line">        <span class="comment">//打印二维数组</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;<span class="number">11</span>;i++)&#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;<span class="number">11</span>;j++)&#123;</span><br><span class="line">                System.out.printf(<span class="string">&quot;%d\t&quot;</span>,array[i][j]);</span><br><span class="line">            &#125;</span><br><span class="line">            System.out.println();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//遍历二维数组得出非零元素的个数</span></span><br><span class="line">        <span class="keyword">int</span> sum=<span class="number">0</span>;<span class="comment">//用于记录非零元素的个数</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span>[] arr:array)&#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> e:arr)&#123;</span><br><span class="line">                <span class="keyword">if</span>(e!=<span class="number">0</span>)&#123;</span><br><span class="line">                    sum++;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//创建稀疏数组</span></span><br><span class="line">        <span class="keyword">int</span>[][] sparseArr=<span class="keyword">new</span> <span class="keyword">int</span>[sum+<span class="number">1</span>][<span class="number">3</span>];</span><br><span class="line">        sparseArr[<span class="number">0</span>][<span class="number">0</span>]=array.length;</span><br><span class="line">        sparseArr[<span class="number">0</span>][<span class="number">1</span>]=array[<span class="number">0</span>].length;</span><br><span class="line">        sparseArr[<span class="number">0</span>][<span class="number">2</span>]=sum;</span><br><span class="line">        <span class="keyword">int</span> count=<span class="number">0</span>;<span class="comment">//计数器</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;array.length;i++)&#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;array[<span class="number">0</span>].length;j++)&#123;</span><br><span class="line">                <span class="keyword">if</span>(array[i][j]!=<span class="number">0</span>)&#123;</span><br><span class="line">                    count++;</span><br><span class="line">                    sparseArr[count][<span class="number">0</span>]=i;</span><br><span class="line">                    sparseArr[count][<span class="number">1</span>]=j;</span><br><span class="line">                    sparseArr[count][<span class="number">2</span>]=array[i][j];</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//打印稀疏数组</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;sparseArr.length;i++)&#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;sparseArr[<span class="number">0</span>].length;j++)&#123;</span><br><span class="line">                System.out.printf(<span class="string">&quot;%d\t&quot;</span>,sparseArr[i][j]);</span><br><span class="line">            &#125;</span><br><span class="line">            System.out.println();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//稀疏数组转二维数组</span></span><br><span class="line">        <span class="keyword">int</span>[][] arr2=<span class="keyword">new</span> <span class="keyword">int</span>[sparseArr[<span class="number">0</span>][<span class="number">0</span>]][sparseArr[<span class="number">0</span>][<span class="number">1</span>]];</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;sparseArr.length;i++) &#123;</span><br><span class="line">            arr2[sparseArr[i][<span class="number">0</span>]][sparseArr[i][<span class="number">1</span>]]=sparseArr[i][<span class="number">2</span>];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//打印二维数组</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;<span class="number">11</span>;i++)&#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;<span class="number">11</span>;j++)&#123;</span><br><span class="line">                System.out.printf(<span class="string">&quot;%d\t&quot;</span>,arr2[i][j]);</span><br><span class="line">            &#125;</span><br><span class="line">            System.out.println();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
       
 
       
     </div>
     <div class="article-info article-info-index">
       
-        <div class="article-pop-out tagcloud">
-          <i class="icon-tuding"></i>
-          <a class="article-tag-list-link color3">置顶</a>
-        </div>
       
-      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java 数据结构</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2021/06/04/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/06/03/hello-world/">Hello World</a>
-    </h1>
-  
-
-
-        
-        
-
-
-<a href="/2021/06/03/hello-world/" class="archive-article-date">
-  	<time datetime="2021-06-03T13:48:58.638Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-03</time>
-</a>
-
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-        <div class="article-pop-out tagcloud">
-          <i class="icon-tuding"></i>
-          <a class="article-tag-list-link color3">置顶</a>
-        </div>
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/06/03/hello-world/">展开全文 >></a>
+          <a class="article-more-a" href="/2021/06/05/day1%20%E7%A8%80%E7%96%8F%E6%95%B0%E7%BB%84/">展开全文 >></a>
         </p>
       
 
@@ -423,6 +385,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">java 数据结构</a>
+              </li>
             
             <div class="clearfix"></div>
           </ul>
