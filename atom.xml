@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-09-02T13:35:26.240Z</updated>
+  <updated>2023-09-02T18:36:09.284Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -18,18 +18,19 @@
   
   <entry>
     <title>温习博客搭建</title>
-    <link href="http://example.com/2023/09/02/%E6%B8%A9%E4%B9%A0%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
-    <id>http://example.com/2023/09/02/%E6%B8%A9%E4%B9%A0%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</id>
+    <link href="http://example.com/2023/09/02/blog_build/"/>
+    <id>http://example.com/2023/09/02/blog_build/</id>
     <published>2023-09-02T13:35:08.000Z</published>
-    <updated>2023-09-02T13:35:26.240Z</updated>
+    <updated>2023-09-02T18:36:09.284Z</updated>
     
-    <content type="html"><![CDATA[<p>博客搭建温习</p>]]></content>
+    <content type="html"><![CDATA[<p>参考：</p><ol><li><a href="https://blog.csdn.net/weixin_45019350/article/details/121901433?ops_request_misc=%7B%22request_id%22:%22169365558316800188546837%22,%22scm%22:%2220140713.130102334..%22%7D">hexo搭建个人博客</a></li><li><a href="https://blog.csdn.net/sinat_37781304/article/details/82729029?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522169365558316800188546837%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&request_id=169365558316800188546837&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~top_positive~default-1-82729029-null-null.142%5Ev93%5EchatsearchT3_2&utm_term=hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2&spm=1018.2226.3001.4187">hexo搭建个人博客及hexo源码分支和页面分支管理</a></li><li><a href="https://butterfly.js.org/link/#%E7%A4%BA%E4%BE%8B">butterfly示例博客</a></li><li><a href="https://blog.fufu.ink/2023/02/hexobackuphouhou.html">hexo备份</a><br></li></ol><h2 id="博客搭建基本流程"><a href="#博客搭建基本流程" class="headerlink" title="博客搭建基本流程"></a>博客搭建基本流程</h2><h3 id="安装git-Node-js"><a href="#安装git-Node-js" class="headerlink" title="安装git, Node.js"></a>安装git, Node.js<br></h3><h3 id="安装npm和hexo"><a href="#安装npm和hexo" class="headerlink" title="安装npm和hexo"></a>安装npm和hexo<br></h3><div class="note info flat"><p><code>npm install -g cnpm --registry=https://registry.npm.taobao.org</code>和<code>npm install -g hexo-cli</code>的区别  </p></div>  <p><img src="/img/blog_build/image.png" alt="Alt text"></p><div class="note info flat"><p>npm包和node_modules</p></div><p><img src="/img/blog_build/image-1.png" alt="Alt text"></p><div class="note info flat"><p><code>npm install -g hexo-cli</code>和<code>npm install</code>的区别</p></div><p><img src="/img/blog_build/image-2.png" alt="Alt text"></p><div class="note info flat"><p><code>npx hexo</code>和 <code>hexo</code>的区别</p></div><p><img src="/img/blog_build/image-3.png" alt="Alt text"></p><div class="note info flat"><p>通过<code>npm install -g hexo-cli</code>安装后仍然找不到hexo命令</p></div><p><img src="/img/blog_build/image-4.png" alt="Alt text"><br>总结来说就是hexo-cli被npm安装在Node.js的全局模块中，但是Node.js没有配置环境变量。        </p><ul><li>添加Node.js的全局模块目录到系统的PATH中<br><img src="/img/blog_build/image-5.png" alt="Alt text"></li></ul><h2 id="hexo常用命令"><a href="#hexo常用命令" class="headerlink" title="hexo常用命令"></a>hexo常用命令</h2><!-- ![Alt text](img/blog_build/image-7.png)   --><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">hexo g        --generate,编译生成静态网页</span><br><span class="line">hexo clean      --删除public目录下的所有内容(没有必要删除)</span><br><span class="line">hexo server     --启动hexo的本地服务器，展示public目录下的内容</span><br><span class="line">hexo deploy     --部署，推动hexo网页内容到github</span><br><span class="line">hexo new blog_name  --在source/_posts目录下创建新的markdown文件</span><br></pre></td></tr></table></figure><h2 id="hexo博客备份"><a href="#hexo博客备份" class="headerlink" title="hexo博客备份"></a>hexo博客备份</h2><p>目前个人仓库xiaojie112.github.io中有两个分支，分支main用于部署hexo博客页面(即hexo编译得到的前端页面), 分支hexo是博客源文件, 分支hexo被我修改为default分支，即clone拉取和push提交都是在这个分支上进行，但是hexo deploy是在main分支上进行，这在博客根目录下的_config.yml中进行了配置<br>`&#96;&#96;yaml</p><h1 id="Deployment"><a href="#Deployment" class="headerlink" title="Deployment"></a>Deployment</h1><h2 id="Docs-https-hexo-io-docs-one-command-deployment"><a href="#Docs-https-hexo-io-docs-one-command-deployment" class="headerlink" title="Docs: https://hexo.io/docs/one-command-deployment"></a>Docs: <a href="https://hexo.io/docs/one-command-deployment">https://hexo.io/docs/one-command-deployment</a></h2><p>deploy:<br> type: git<br> repository: <a href="mailto:&#103;&#105;&#x74;&#x40;&#x67;&#105;&#x74;&#104;&#117;&#98;&#x2e;&#99;&#x6f;&#109;">&#103;&#105;&#x74;&#x40;&#x67;&#105;&#x74;&#104;&#117;&#98;&#x2e;&#99;&#x6f;&#109;</a>:xiaojie112&#x2F;xiaojie112.github.io.git<br> branch: main<br>`&#96;&#96;</p><h2 id="BUG"><a href="#BUG" class="headerlink" title="BUG"></a>BUG</h2><div class="note warning flat"><p>对于单行代码请使用单个反引号包围单行代码，对于多行代码使用3个反引号包含多行代码块，否则编译报错</p></div>  <p><img src="/img/blog_build/image-6.png" alt="Alt text"></p><h2 id="其它"><a href="#其它" class="headerlink" title="其它"></a>其它</h2><p>图片搜索路径一定是img&#x2F;…<br>只要不是修改图片什么的，保存文件hexo自动更新</p><div class="note flat"><p>默認 提示塊標籤</p></div><div class="note default flat"><p>default 提示塊標籤</p></div><div class="note primary flat"><p>primary 提示塊標籤</p></div><div class="note success flat"><p>success 提示塊標籤</p></div><div class="note info flat"><p>info 提示塊標籤</p></div><div class="note warning flat"><p>warning 提示塊標籤</p></div><div class="note danger flat"><p>danger 提示塊標籤</p></div>]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt;博客搭建温习&lt;/p&gt;
-</summary>
+    <summary type="html">&lt;p&gt;参考：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&quot;https://blog.csdn.net/weixin_45019350/article/details/121901433?ops_request_misc=%7B%22request_id%22:%221693655</summary>
       
     
     
@@ -42,15 +43,15 @@
     <link href="http://example.com/2023/07/22/%E4%BD%BF%E7%94%A8hexo-github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/"/>
     <id>http://example.com/2023/07/22/%E4%BD%BF%E7%94%A8hexo-github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</id>
     <published>2023-07-22T13:16:00.000Z</published>
-    <updated>2023-07-22T14:01:46.036Z</updated>
+    <updated>2023-09-02T17:50:30.995Z</updated>
     
-    <content type="html"><![CDATA[<p>npm和node.js的关系</p><p>git clone -b master <a href="mailto:&#x67;&#105;&#x74;&#64;&#x67;&#x69;&#x74;&#104;&#117;&#98;&#x2e;&#99;&#111;&#x6d;">&#x67;&#105;&#x74;&#64;&#x67;&#x69;&#x74;&#104;&#117;&#98;&#x2e;&#99;&#111;&#x6d;</a>:jerryc127&#x2F;hexo-theme-butterfly.git themes&#x2F;butterfly</p><p>参考：</p><p>[(113条消息) Butterfly主题安装文档(三)之主题配置2_buttifly主题_前端开心果的博客-CSDN博客](<a href="https://blog.csdn.net/qq_38157825/article/details/112783083#:~:text=%E4%BB%8E">https://blog.csdn.net/qq_38157825/article/details/112783083#:~:text=从</a> 3.0.0 开始，开启评论需要在 comments-use 中填写你需要的评论。 支持双评论显示，只需要配置两个评论（第一个为默认显示）,修改主题配置文件 _config.butterfly.yml ： comments%3A use%3A %23 使用的评论（请注意，填写的评论首字母需要大写。)</p><p><a href="https://butterfly.js.org/posts/4aa8abbe/#%E8%8F%9C%E5%96%AE-%E7%9B%AE%E9%8C%84">Butterfly 安裝文檔(三) 主題配置-1 | Butterfly</a></p><p><a href="https://blog.csdn.net/YR_112233/article/details/122778691">(113条消息) hexo个人博客搭建（二）butterfly主题配置_其实不会敲代码的博客-CSDN博客</a></p><p>头像更换</p><p>评论系统配置</p><p>主页封面图片</p><p>文章详情页图片设置</p><p>每篇文章的covert设置</p><p>字数统计</p><p>标题和副标题</p><p>动态彩带</p><p>页面美化</p><p>本地搜索完成</p><p><img src="/img/blog/image-20230722203246518.png" alt="image-20230722203246518"></p><p>显示报错不需要管</p><p><img src="/img/blog/image-20230722210837378.png" alt="image-20230722210837378"></p><p>发达省份的 🤖</p><p>发达省份的 🤖</p><p>🙂</p><div width="100" height="100">🙂<div><p><span style="font-size: 100px; font-weight: bold;">🤖</span>fadfafasdfa</p>]]></content>
+    <content type="html"><![CDATA[<p>npm和node.js的关系</p><p>git clone -b master <a href="mailto:&#x67;&#x69;&#116;&#x40;&#x67;&#105;&#x74;&#104;&#x75;&#98;&#46;&#x63;&#111;&#109;">&#x67;&#x69;&#116;&#x40;&#x67;&#105;&#x74;&#104;&#x75;&#98;&#46;&#x63;&#111;&#109;</a>:jerryc127&#x2F;hexo-theme-butterfly.git themes&#x2F;butterfly</p><p>参考：</p><p>[(113条消息) Butterfly主题安装文档(三)之主题配置2_buttifly主题_前端开心果的博客-CSDN博客](<a href="https://blog.csdn.net/qq_38157825/article/details/112783083#:~:text=%E4%BB%8E">https://blog.csdn.net/qq_38157825/article/details/112783083#:~:text=从</a> 3.0.0 开始，开启评论需要在 comments-use 中填写你需要的评论。 支持双评论显示，只需要配置两个评论（第一个为默认显示）,修改主题配置文件 _config.butterfly.yml ： comments%3A use%3A %23 使用的评论（请注意，填写的评论首字母需要大写。)</p><p><a href="https://butterfly.js.org/posts/4aa8abbe/#%E8%8F%9C%E5%96%AE-%E7%9B%AE%E9%8C%84">Butterfly 安裝文檔(三) 主題配置-1 | Butterfly</a></p><p><a href="https://blog.csdn.net/YR_112233/article/details/122778691">(113条消息) hexo个人博客搭建（二）butterfly主题配置_其实不会敲代码的博客-CSDN博客</a></p><p>头像更换</p><p>评论系统配置</p><p>主页封面图片</p><p>文章详情页图片设置</p><p>每篇文章的covert设置</p><p>字数统计</p><p>标题和副标题</p><p>动态彩带</p><p>页面美化</p><p>本地搜索完成</p><p><img src="/img/blog/image-20230722203246518.png" alt="image-20230722203246518"></p><p>显示报错不需要管</p><p><img src="/img/blog/image-20230722210837378.png" alt="image-20230722210837378"></p><p>发达省份的 🤖</p><p>发达省份的 🤖</p><p>🙂</p><div width="100" height="100">🙂<div><p><span style="font-size: 100px; font-weight: bold;">🤖</span>fadfafasdfa</p>]]></content>
     
     
       
       
     <summary type="html">&lt;p&gt;npm和node.js的关系&lt;/p&gt;
-&lt;p&gt;git clone -b master &lt;a href=&quot;mailto:&amp;#x67;&amp;#105;&amp;#x74;&amp;#64;&amp;#x67;&amp;#x69;&amp;#x74;&amp;#104;&amp;#117;&amp;#98;&amp;#x2e;&amp;#99;&amp;#111;&amp;#x6</summary>
+&lt;p&gt;git clone -b master &lt;a href=&quot;mailto:&amp;#x67;&amp;#x69;&amp;#116;&amp;#x40;&amp;#x67;&amp;#105;&amp;#x74;&amp;#104;&amp;#x75;&amp;#98;&amp;#46;&amp;#x63;&amp;#111;&amp;#1</summary>
       
     
     
@@ -88,7 +89,7 @@
     <link href="http://example.com/2023/07/22/new-post1/"/>
     <id>http://example.com/2023/07/22/new-post1/</id>
     <published>2023-07-22T12:13:28.000Z</published>
-    <updated>2023-07-22T12:13:48.488Z</updated>
+    <updated>2023-07-22T13:47:14.677Z</updated>
     
     <content type="html"><![CDATA[<p>test1</p>]]></content>
     
