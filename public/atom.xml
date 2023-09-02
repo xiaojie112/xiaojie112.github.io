@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Damon&#39;s Blog</title>
+  
+  
+  <link href="http://example.com/atom.xml" rel="self"/>
+  
+  <link href="http://example.com/"/>
+  <updated>2023-09-02T13:35:26.240Z</updated>
+  <id>http://example.com/</id>
+  
+  <author>
+    <name>Damon Jie</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>温习博客搭建</title>
+    <link href="http://example.com/2023/09/02/%E6%B8%A9%E4%B9%A0%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
+    <id>http://example.com/2023/09/02/%E6%B8%A9%E4%B9%A0%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</id>
+    <published>2023-09-02T13:35:08.000Z</published>
+    <updated>2023-09-02T13:35:26.240Z</updated>
+    
+    <content type="html"><![CDATA[<p>博客搭建温习</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;博客搭建温习&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>使用hexo+github搭建个人博客</title>
+    <link href="http://example.com/2023/07/22/%E4%BD%BF%E7%94%A8hexo-github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/"/>
+    <id>http://example.com/2023/07/22/%E4%BD%BF%E7%94%A8hexo-github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</id>
+    <published>2023-07-22T13:16:00.000Z</published>
+    <updated>2023-07-22T14:01:46.036Z</updated>
+    
+    <content type="html"><![CDATA[<p>npm和node.js的关系</p><p>git clone -b master <a href="mailto:&#x67;&#105;&#x74;&#64;&#x67;&#x69;&#x74;&#104;&#117;&#98;&#x2e;&#99;&#111;&#x6d;">&#x67;&#105;&#x74;&#64;&#x67;&#x69;&#x74;&#104;&#117;&#98;&#x2e;&#99;&#111;&#x6d;</a>:jerryc127&#x2F;hexo-theme-butterfly.git themes&#x2F;butterfly</p><p>参考：</p><p>[(113条消息) Butterfly主题安装文档(三)之主题配置2_buttifly主题_前端开心果的博客-CSDN博客](<a href="https://blog.csdn.net/qq_38157825/article/details/112783083#:~:text=%E4%BB%8E">https://blog.csdn.net/qq_38157825/article/details/112783083#:~:text=从</a> 3.0.0 开始，开启评论需要在 comments-use 中填写你需要的评论。 支持双评论显示，只需要配置两个评论（第一个为默认显示）,修改主题配置文件 _config.butterfly.yml ： comments%3A use%3A %23 使用的评论（请注意，填写的评论首字母需要大写。)</p><p><a href="https://butterfly.js.org/posts/4aa8abbe/#%E8%8F%9C%E5%96%AE-%E7%9B%AE%E9%8C%84">Butterfly 安裝文檔(三) 主題配置-1 | Butterfly</a></p><p><a href="https://blog.csdn.net/YR_112233/article/details/122778691">(113条消息) hexo个人博客搭建（二）butterfly主题配置_其实不会敲代码的博客-CSDN博客</a></p><p>头像更换</p><p>评论系统配置</p><p>主页封面图片</p><p>文章详情页图片设置</p><p>每篇文章的covert设置</p><p>字数统计</p><p>标题和副标题</p><p>动态彩带</p><p>页面美化</p><p>本地搜索完成</p><p><img src="/img/blog/image-20230722203246518.png" alt="image-20230722203246518"></p><p>显示报错不需要管</p><p><img src="/img/blog/image-20230722210837378.png" alt="image-20230722210837378"></p><p>发达省份的 🤖</p><p>发达省份的 🤖</p><p>🙂</p><div width="100" height="100">🙂<div><p><span style="font-size: 100px; font-weight: bold;">🤖</span>fadfafasdfa</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;npm和node.js的关系&lt;/p&gt;
+&lt;p&gt;git clone -b master &lt;a href=&quot;mailto:&amp;#x67;&amp;#105;&amp;#x74;&amp;#64;&amp;#x67;&amp;#x69;&amp;#x74;&amp;#104;&amp;#117;&amp;#98;&amp;#x2e;&amp;#99;&amp;#111;&amp;#x6</summary>
+      
+    
+    
+    
+    
+    <category term="博客搭建" scheme="http://example.com/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>new post2</title>
+    <link href="http://example.com/2023/07/22/new-post2/"/>
+    <id>http://example.com/2023/07/22/new-post2/</id>
+    <published>2023-07-22T12:15:19.000Z</published>
+    <updated>2023-07-22T12:15:32.552Z</updated>
+    
+    <content type="html"><![CDATA[<p>test2</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;test2&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    
+    <category term="测试" scheme="http://example.com/tags/%E6%B5%8B%E8%AF%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>new post1</title>
+    <link href="http://example.com/2023/07/22/new-post1/"/>
+    <id>http://example.com/2023/07/22/new-post1/</id>
+    <published>2023-07-22T12:13:28.000Z</published>
+    <updated>2023-07-22T12:13:48.488Z</updated>
+    
+    <content type="html"><![CDATA[<p>test1</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;test1&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    
+    <category term="测试" scheme="http://example.com/tags/%E6%B5%8B%E8%AF%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://example.com/2023/07/22/hello-world/"/>
+    <id>http://example.com/2023/07/22/hello-world/</id>
+    <published>2023-07-22T09:28:09.237Z</published>
+    <updated>2023-07-22T10:44:14.066Z</updated>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt; for</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+</feed>
