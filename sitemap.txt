@@ -1,5 +1,5 @@
-http://example.com/2023/09/03/git-learn/
 http://example.com/2023/09/02/blog_build/
+http://example.com/2023/09/03/git-learn/
 http://example.com/2023/07/22/%E4%BD%BF%E7%94%A8hexo-github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/
 http://example.com/2023/07/22/new-post1/
 http://example.com/2023/07/22/new-post2/
@@ -9,3 +9,5 @@ http://example.com/categories/index.html
 http://example.com/
 http://example.com/tags/%E6%B5%8B%E8%AF%95/
 http://example.com/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/
+http://example.com/tags/hexo/
+http://example.com/tags/git/
