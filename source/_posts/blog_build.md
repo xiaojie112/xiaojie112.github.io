@@ -1,7 +1,12 @@
 ---
-title: 温习博客搭建
+title: 使用hexo+github搭建个人博客
 date: 2023-09-02 21:35:08
 tags:
+    - 博客搭建
+    - hexo
+
+top_img: /img/blog_build/hexo-blog.jpg
+cover: /img/blog_build/hexo-blog.jpg
 ---
 
 
@@ -85,8 +90,50 @@ deploy:
 
 
 ## 其它
-添加封面页
-备份
+### 添加封面页  
+### 备份&迁移
+- 删除掉`themes/butterfly/.git`文件夹。
+- 备份以下内容：
+```shell
+scaffolds
+source
+themes
+.gitignore
+_config.yml
+package.json
+_config.butterfly.yml
+```
+.gitignore内容如下：
+```shell
+.deploy_git
+.github
+node_modules
+```
+- 通过git push将博客推送到个人仓库xiaojie112.github.io的默认分支(hexo)。
+- 迁移：将个人仓库xiaojie112.github.io中的默认分支(hexo)clone到本地，由于本地已经安装了全局hexo-cli，这里仅需要安装`npm install`安装node_modules相关依赖包。
+### tags标签
+使用如下方法可以声明多个标签
+```markdown
+---
+title: 使用hexo+github搭建个人博客
+date: 2023-09-02 21:35:08
+tags:
+    - 博客搭建
+    - hexo
+---
+
+```
+
+### 文章封面图片
+在post的markdown中添加如下内容：
+```markdown
+top_img: /img/blog_build/hexo-blog.jpg
+cover: /img/blog_build/hexo-blog.jpg
+```
+top_img指定的是：
+![Alt text](img/blog_build/image-10.png)
+cover指定的是：
+![Alt text](img/blog_build/image-9.png)
 
 ## REFERENCE
 参考：
@@ -96,31 +143,3 @@ deploy:
 4. [hexo备份](https://blog.fufu.ink/2023/02/hexobackuphouhou.html)
 5. [butterfly document](https://butterfly.js.org/en/posts/butterfly-docs-en-get-started/)
 <br>
-
-{% note flat %}
-默認 提示塊標籤
-{% endnote %}
-
-{% note default flat %}
-default 提示塊標籤
-{% endnote %}
-
-{% note primary flat %}
-primary 提示塊標籤
-{% endnote %}
-
-{% note success flat %}
-success 提示塊標籤
-{% endnote %}
-
-{% note info flat %}
-info 提示塊標籤
-{% endnote %}
-
-{% note warning flat %}
-warning 提示塊標籤
-{% endnote %}
-
-{% note danger flat %}
-danger 提示塊標籤
-{% endnote %}

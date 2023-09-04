@@ -9,3 +9,5 @@ http://example.com/categories/index.html
 http://example.com/
 http://example.com/tags/%E6%B5%8B%E8%AF%95/
 http://example.com/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/
+http://example.com/tags/hexo/
+http://example.com/tags/git/

@@ -1,5 +1,5 @@
 ---
-title: 使用hexo+github搭建个人博客
+title: 博客test
 date: 2023-07-22 21:16:00
 tags: 博客搭建
 ---
